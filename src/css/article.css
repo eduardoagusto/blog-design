@@ -1,0 +1,25 @@
+article {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin: 2em auto;
+  max-width: 100vw;
+  width: 60%;
+  height: min-content;
+  padding: 1em;
+  border-left: solid 1px white;
+}
+article h1 {
+  font-style: normal;
+  font-weight: 900;
+  font-size: 40px;
+  line-height: 50px;
+  text-decoration-line: underline;
+}
+article h2 {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  padding: 1em 0;
+}

@@ -1,0 +1,30 @@
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 8rem;
+}
+header ul {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  height: min-content;
+  gap: 2em;
+
+  list-style: none;
+}
+header ul li {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+
+  line-height: 19px;
+  padding: 4px;
+
+  cursor: pointer;
+}
+header ul img {
+  margin: 0 3em 0 0;
+}
