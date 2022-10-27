@@ -7,21 +7,22 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tailwind</title>
+    <title>Blog</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="./src/css/index.css" />
   </head>
   <body>
     <div class="svg-background">
-      <img src="vector1.svg" alt="" />
-      <img src="vector2.svg" alt="" />
-      <img src="vector3.svg" alt="" />
-      <img src="vector4.svg" alt="" />
-      <img src="vector5.svg" alt="" />
+      <object type="image/svg+xml" data="vector1.svg"></object>
+      <object type="image/svg+xml" data="vector2.svg"></object>
+      <object type="image/svg+xml" data="vector3.svg"></object>
+      <object type="image/svg+xml" data="vector4.svg"></object>
+      <object type="image/svg+xml" data="vector5.svg"></object>
     </div>
-    
+
     <header>
       <ul>
         <img src="logo.svg" alt="Logo do Blog" />
@@ -32,34 +33,139 @@
     </header>
 
     <article>
-      <h1>Blog</h1>
-      <h2>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis
-        deleniti et necessitatibus eius sed doloribus quasi rerum modi, culpa
-        inventore aut hic expedita numquam provident dignissimos reprehenderit
-        odio, repudiandae aspernatur? Ius sed doloribus quasi rerum modi, culpa
-        inventore aut hic expedita numquam provident dignissimos reprehenderit
-        odi!
-      </h2>
+      <h1 id="sass">Sass</h1>
+      <p>Pré-processador de CSS onde o código Sass é convertido para CSS.</p>
+      <p><strong>Duas Sintaxe SCSS ou SASS</strong></p>
+      <blockquote>
+        <p>
+          SCSS é uma sintaxe bem próxima do CSS, mas com recursos do SASS, como
+          aninhamento ou especificidade <strong>(nesting)</strong>. -SASS traz
+          mais produtividade, omitindo algumas partes do código.<br />
+          'A diferença entre SASS e SCSS é puramente sintática, ambas possuem a
+          mesma estrutura interna. SASS possui uma sintaxe mais parecida com
+          Python e HAML, SCSS é mais parecida com Ruby e CSS.'
+        </p>
+      </blockquote>
+
+      <p><strong>Sass Install</strong></p>
+      <blockquote>
+        <code>
+          <p>
+            npm install -g sass (packege install) (-g global install)<br />
+            VSCode Extation: Sass
+          </p>
+        </code>
+      </blockquote>
+
+      <p>
+        <strong>Compilando o arquivo selecionado para pré-processamento</strong>
+      </p>
+      <blockquote>
+        <code>
+          <p>sass --watch root/styles.css:css/styles.css</p>
+        </code>
+      </blockquote>
+
+      <p><strong>Criando Variáveis com SASS</strong></p>
+      <blockquote>
+        <p>
+          <code>$primary-color: #FFF</code>
+          <code>$secundary-color: #242424</code>
+          <code>$container-width: 1170px</code>
+        </p>
+      </blockquote>
+
+      <p><strong>Instruções/Métodos para importar arquivos SASS</strong></p>
+      <blockquote>
+        <p>
+          <strong>@import</strong> or <strong>@use</strong> (@use é nova e mais
+          performática)<br />
+          <strong>@mixins</strong> => cria blocos de código reaproveitáveis.
+          Para seu uso, devemos usar o <strong>@include</strong>.<br />
+          <strong>@inlcude</strong> => faz a adição das propriedades salvas em
+          algum mixin.
+        </p>
+        <blockquote>
+          <p>
+            <strong>Ex: Adicionando &#39;container&#39; mixin</strong>
+            <br />Criar um novo arquivo .sass utilizando as normas e boas
+            práticas de nomenclatura de arquivos
+            <strong>(_mixins.sass)</strong>
+            <strong>@use</strong> 'atributes';
+          </p>
+          <blockquote>
+            <p>
+              <strong>@mixin</strong> container
+              <code>max-width: variables.$container-width</code>
+              <code>padding: 1.5rem 0</code>
+              <code>margin: 0 auto</code>
+            </p>
+            <p>
+              <strong
+                ><em
+                  >Agora esse bloco de propriedades pode ser utilizado em
+                  qualquer parte do meu código, facilitando também na
+                  manutenção, apenas fazendo a alteração do mixin
+                  'container'.</em
+                ></strong
+              >
+            </p>
+            <p>
+              Aplicando o uso do <strong>@mixin</strong> com
+              <strong>@include</strong><br />
+              <code>. header</code><br />
+              <code>display: flex</code><br />
+              <code>@include mixins.container</code><br />
+              <code>//@include [archive-name].[mixin-name]</code>
+            </p>
+          </blockquote>
+        </blockquote>
+      </blockquote>
+
+      <p><strong>Criando propriedades dinâmicos</strong></p>
+      <blockquote>
+        <p>
+          <code>@mixin bg-img ($img)</code>
+          <code>background-image : url(/img/#{$img})</code>
+        </p>
+        <p>
+          <code
+            >//($img) criou uma propriedade variável, que foi chamada em
+            #{$img}</code
+          >
+        </p>
+        <blockquote>
+          <p>
+            Para utilizar basta fazer o <strong>@include</strong> na classe que
+            deseja
+            <code
+              >#card-1 @include mixins.bg-img('carros.jpg') #card-2 @include
+              mixins.bg-img('arquitetura.jpg')</code
+            >
+          </p>
+        </blockquote>
+      </blockquote>
     </article>
     <section class="container">
-        <div class="box">
-          <img src="react.svg" alt="" />
-          <h2>React</h2>
-          <p>Lorem ipsum dolor, illo optio vitae a tenetur aliqui</p>
-        </div>
-        <div class="box">
-          <img src="react.svg" alt="" />
-          <h2>React</h2>
-          <p>Lorem ipsum dolor, illo optio vitae a tenetur aliqui</p>
-        </div>
-        <div class="box">
-          <img src="vitejs.svg" alt="" />
-          <h2>Vite</h2>
-          <p>Lorem ipsum dolor, illo optio vitae a tenetur aliqui</p>
-        </div>
+      <div class="card">
+        <object type="image/svg+xml" data="react.svg"></object>
+        <h2>React</h2>
+        <p>Lorem ipsum dolor, illo optio vitae a tenetur aliqui</p>
+      </div>
+      <div class="card">
+        <object type="image/svg+xml" data="react.svg"></object>
+        <h2>React</h2>
+        <p>Lorem ipsum dolor, illo optio vitae a tenetur aliqui</p>
+      </div>
+      <div class="card">
+        <object type="image/svg+xml" data="vitejs.svg"></object>
+        <h2>Vite</h2>
+        <p>Lorem ipsum dolor, illo optio vitae a tenetur aliqui</p>
       </div>
     </section>
+    <footer>
+      <span>Just a lilte bit study! &copy;</span>
+      <span>by Eduardo Augusto</span>
+    </footer>
   </body>
-  <script type="module" src="/src/main.js"></script>
 </html>

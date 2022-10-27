@@ -2,24 +2,44 @@ article {
   position: relative;
   display: flex;
   flex-direction: column;
+
   margin: 2em auto;
+  padding: 1em;
+
   max-width: 100vw;
   width: 60%;
   height: min-content;
-  padding: 1em;
-  border-left: solid 1px white;
+
+  border-left: 0.1rem solid #f2fcfe;
 }
 article h1 {
   font-style: normal;
   font-weight: 900;
-  font-size: 40px;
-  line-height: 50px;
+  font-size: 4rem;
+  line-height: 5rem;
   text-decoration-line: underline;
 }
-article h2 {
+article p {
   font-style: normal;
   font-weight: 500;
-  font-size: 14px;
-  line-height: 17px;
-  padding: 1em 0;
+  font-size: 1.4rem;
+  line-height: 1.7rem;
+
+  padding: 1rem 0;
+  margin-bottom: 1rem;
+}
+article blockquote {
+  margin: 0 0 0 2rem;
+  padding: 1rem;
+  border-left: 0.1rem solid #f2fcfe;
+}
+
+@media (max-width: 450px) {
+  article {
+    padding: 0.5rem;
+  }
+  article blockquote {
+    margin: 0 0 0 0.2rem;
+    padding: 0.5rem;
+  }
 }

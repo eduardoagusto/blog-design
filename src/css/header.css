@@ -24,6 +24,10 @@ header ul li {
   padding: 4px;
 
   cursor: pointer;
+  transition: ease-in-out 0.1s;
+}
+header ul li:hover {
+  transform: scale(1.1);
 }
 header ul img {
   margin: 0 3em 0 0;

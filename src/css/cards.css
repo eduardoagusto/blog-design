@@ -1,83 +1,75 @@
-@media (max-width: 400px) {
-  h1 {
-    font-size: 1.5rem;
-  }
-}
-
-.box p {
-  color: white;
-  font-size: 1.2rem;
-}
-
-.box {
+.card {
   cursor: pointer;
-  border-radius: 5px;
-  padding: 30px;
-  background: rgba(36, 36, 36, 0.54);
+  border-radius: 0.5rem;
+  padding: 3rem;
+  background: rgba(242, 252, 254, 0.01);
   border-radius: 16px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(18.5px);
-  -webkit-backdrop-filter: blur(18.5px);
+  box-shadow: 0.1rem 0.1rem 0.5rem rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  transition: ease-in-out 0.2s;
 }
-.box:hover {
+.card:hover {
   transform: scale(0.9);
 }
+.card h2 {
+  color: #f2fcfe;
+  font-size: 2rem;
+  font-weight: 900;
+  margin-bottom: 1.5rem;
+}
+.card p {
+  color: #f2fcfe;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
 
-img {
+.card object {
   float: right;
 }
-
-@media (max-width: 450px) {
-  .box {
-    height: 100px;
-    margin-top: 1em;
-  }
-  .box img {
-    width: 30px;
-  }
-}
-
-@media (max-width: 1024px) and (min-width: 450px) {
-  .box {
-    text-align: center;
-    height: 90px;
-    max-width: 50vw;
-    margin: 1em auto;
-    padding: 20px;
-  }
-  .box img {
-    width: 40px;
-  }
-}
-
-h2 {
-  color: #f2fcfe;
-  font-weight: 900;
-}
-
 @media (min-width: 1025px) {
   .container {
     display: grid;
-    margin: 12em auto 4em;
+    margin: 12rem auto 4rem;
     max-width: 100vw;
     width: 60%;
     height: min-content;
     grid-template-areas:
       "favorit default"
       "favorit comum";
-    gap: 2em;
+    gap: 2rem;
   }
-  .box:nth-child(1) {
+  .card:nth-child(1) {
     flex-direction: column;
     display: flex;
     justify-content: center;
     align-items: center;
     grid-area: favorit;
   }
-  .box:nth-child(2) {
+  .card:nth-child(2) {
     grid-area: default;
   }
-  .box:nth-child(3) {
+  .card:nth-child(3) {
     grid-area: comum;
+  }
+}
+@media (max-width: 1024px) and (min-width: 450px) {
+  .card {
+    text-align: center;
+    max-width: 50vw;
+    margin: 1em auto;
+    padding: 2rem;
+  }
+  .card object {
+    width: 4rem;
+  }
+}
+@media (max-width: 450px) {
+  .card {
+    height: 10rem;
+    margin-top: 1rem;
+  }
+  .card object {
+    width: 3rem;
   }
 }
