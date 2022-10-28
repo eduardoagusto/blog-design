@@ -2,11 +2,11 @@
   cursor: pointer;
   border-radius: 0.5rem;
   padding: 3rem;
-  background: rgba(242, 252, 254, 0.01);
-  border-radius: 16px;
-  box-shadow: 0.1rem 0.1rem 0.5rem rgba(0, 0, 0, 0.1);
+  background: #f2fcfe03;
+  box-shadow: 0.1rem 0.1rem 0.5rem #0000001a;
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
+
   transition: ease-in-out 0.2s;
 }
 .card:hover {
@@ -66,10 +66,25 @@
 }
 @media (max-width: 450px) {
   .card {
+    margin-top: 1rem;
+    padding: 1.5rem;
+  }
+  .card object {
+    width: 3rem;
+  }
+  .card h2 {
+    margin-bottom: 0.5rem;
+  }
+}
+@media (max-width: 320px) {
+  .card {
     height: 10rem;
     margin-top: 1rem;
   }
   .card object {
     width: 3rem;
+  }
+  .card h2 {
+    margin-bottom: 0.5rem;
   }
 }

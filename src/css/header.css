@@ -32,3 +32,8 @@ header ul li:hover {
 header ul img {
   margin: 0 3em 0 0;
 }
+@media (max-width: 320px) {
+  header ul {
+    gap: 0.5em;
+  }
+}
