@@ -16,15 +16,19 @@ header ul {
   list-style: none;
 }
 header ul li {
-  font-style: normal;
-  font-weight: 600;
-  font-size: 16px;
-
-  line-height: 19px;
-  padding: 4px;
+  line-height: 1.9rem;
+  padding: 0.4rem;
 
   cursor: pointer;
   transition: ease-in-out 0.1s;
+}
+header ul li a {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1.6rem;
+  text-decoration: none;
+
+  color: #f2fcfe;
 }
 header ul li:hover {
   transform: scale(1.1);
